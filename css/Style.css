@@ -1,0 +1,82 @@
+<style>
+  /* Style for the header and navigation menu */
+  header {
+    display: flex;
+    align-items: center;
+    margin: 50;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 50px; /* added horizontal padding of 50 pixels */
+    display: flex;
+  }
+  nav li {
+    margin-right: 100px;
+  } 
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    text-decoration: underline; /* added underline for all navigation links */
+    color: white; /* added white color for navigation links */
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    border: 0px solid red; /* added red border */
+    padding: 30px; /* added some padding inside the red border */
+    background-color: #454545; /* added light gray background color */
+  }
+  .header-nav h1 {
+    color: white; /* added white color for "Bb" */
+    margin: 0; /* removed default margin for h1 element */
+  }
+  .blue-section {
+    border: 0px solid blue; /* added blue border */
+    padding: 20px; /* added some padding inside the blue border */
+    text-align: center; /* centered the text */
+  }
+  
+  h2::before,
+  h2::after {
+    content: "";
+    display: inline-block;
+    width: 300px;
+    height: 2px;
+    background-color: White;
+    margin: 0 10px;
+    position: relative; /* added position property */
+    top: -5px; /* added top property with a negative value */
+  }
+footer {
+  background-color: #454545; /* changed background color to blue */
+  color: white; /* changed font color to white */
+  padding: 00px 30px; /* added some padding to the footer */
+  display: flex; /* added display:flex to make the contents in a row */
+  justify-content: space-between; /* added space between the two elements */
+  align-items: center;
+}
+img {
+  width: 50%;
+}
+div {
+  background-color: #868686;
+  border: 0px solid blue;
+  color: white;
+  box-sizing: content-box;
+  display: inline-block;
+  max-width: 800px;
+  margin: 100px 0;
+}
+h2, p, button {
+  margin: 50px 0;
+  line-height: 1.8;
+}
+p {
+  padding: 50px;
+}
+h2 {
+   padding: 0px;
+}
+</style>
