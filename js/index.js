@@ -42,3 +42,10 @@ $('.scroll-box p').css({
   'margin': '0',
   'line-height': '1.5em'
 });
+$(document).ready(function() {
+  $('.logo').hover(function() {
+    $(this).addClass('spin');
+  }, function() {
+    $(this).removeClass('spin');
+  });
+});
