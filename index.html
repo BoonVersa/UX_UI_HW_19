@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - A Pen by Ben B</title>
-  <link rel="stylesheet" href="css/Style.css">
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
- <body>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>My Website</title>
-    <style>
-</style>
+    <link rel="stylesheet" href="css/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+  $("a").hover(function() {
+    $(this).css("color", "blue");
+  }, function() {
+    $(this).css("color", "");
+  });
+});
+
+  $(document).ready(function() {
+    $('.logo').hover(function() {
+      $(this).addClass('spin');
+    }, function() {
+      $(this).removeClass('spin');
+    });
+  });
+</script>
+<script>$(document).ready(function() {
+  $(".tab-content").find(".tab").hide(); // hide all tabs by default
+  $(".tab-links li:first-child").addClass("active"); // set the first tab as active
+  $(".tab-content .tab:first-child").show(); // show the content of the first tab
+
+  // when a tab is clicked, switch the active class and show the corresponding content
+  $(".tab-links a").on("click", function(e) {
+    var currentTab = $(this).attr("href");
+    $(".tab-links li").removeClass("active");
+    $(this).parent().addClass("active");
+    $(".tab-content").find(".tab").hide();
+    $(currentTab).show();
+    e.preventDefault();
+  });
+});
+    </script>
   </head>
+  <body>
     <section class="header-nav">
-      <h1>  <img class="logo" src="https://github.com/BoonVersa/UX_UI_HW_17/blob/main/Bpix.png?raw=true" alt="Logo"></h1>
+      <h1>
+        <img class="logo" src="https://github.com/BoonVersa/UX_UI_HW_17/blob/main/Bpix.png?raw=true" alt="Logo">
+      </h1>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -26,26 +53,42 @@
       </nav>
     </section>
     <section class="blue-section">
-  <div>
-    <h2>About Me</h2>
-    <img src="https://github.com/BoonVersa/UX_UI_HW_17/blob/main/Bgap.jpg?raw=true" alt="Rinzler">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. </p>
-    <button type="View my Resume">View My Resume</button>
+      <div class="Yolo">
+        <h2>About Me</h2>
+        <img src="https://github.com/BoonVersa/UX_UI_HW_17/blob/main/Bgap.jpg?raw=true" alt="Rinzler">
+        <div class="tabs">
+  <ul class="tab-links">
+    <li class="active"><a href="#tab1">Tab 1</a></li>
+    <li><a href="#tab2">Tab 2</a></li>
+    <li><a href="#tab3">Tab 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="tab1" class="tab active">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+    </div>
+
+    <div id="tab2" class="tab">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis dolor libero, vel luctus nulla lobortis eget. Praesent vel elementum nunc.</p>
+    </div>
+
+    <div id="tab3" class="tab">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum auctor quam, auctor bibendum odio ultricies vitae. Aliquam vitae faucibus ex.</p>
+    </div>
   </div>
-</section>
-<footer>
-  <h1>Bb</h1>
-  <nav>
-    <ul style="position: absolute; bottom: 100; right: 0; margin: 0;">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</footer>
+</div>
+        <button type="View my Resume">View My Resume</button>
+      </div>
+    </section>
+    <footer>
+      <h1>Bb</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
-</html>
-<!-- partial -->
-  
-</body>
 </html>
