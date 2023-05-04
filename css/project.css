@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    background-image: url("https://raw.githubusercontent.com/BoonVersa/UX_UI_HW_19/main/images/New%20York%20Obsession%201NYO%20(2).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  section div {
+    justify-content: center;
+  }
+  .MainSection {
+    border: 1px solid blue;
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fc);
+    grid-gap: 1em;
+    text-align: center;
+    margin: 50px;
+  }
+  .myArea {
+  align-items: center;
+  width: 1000px;
+  height: 300px;
+  border: 1px solid red;
+  width: 100%;
+  background-color: aliceblue;
+  padding: 00 20px;
+  }
+  .one img {
+    margin: 0px 0;
+  }
+   .one h3, .one p {
+    margin: 0px 0;
+  }
+  button {
+    padding:  8px;
+    margin: 0px;
+  }
+    header {
+      display: flex;
+      align-items: center;
+      margin: 0px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      border: 0px solid red; /* added red border */
+      padding: 0px;
+      flex-direction: row;/* added some padding inside the red border */
+      background-color:  #441c22; /* added light gray background color */
+    }
+  ul {
+    display: flex;
+    list-style: none;
+    font-family: 'Gruppo', sans-serif;
+    font-size: 25px;
+  }
+  li {
+    padding: 0 50px;
+  }
+  img {
+    width: 90px;
+  }
+  footer {
+    background-color: #441c22;
+    color: white;
+    padding: 00px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    color: white;
+  }
+  top {
+  text-items: center;
+  }
+  h1 {
+    text-align: center;
+    margins: 50;
+  }
+  @media screen and (max-width: 767px) {
+    /* CSS styles for mobile screens */
+    .grid-container {
+      grid-template-columns: repeat(1, 1fc);
+      margin: 20px;
+    }
+    ul {
+      font-size: 20px;
+    }
+  }
+  .ja {
+    width: 300;
+  }
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  p {
+    padding: 10px;
+  }
+  button { 
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #441c22;
+    color: aliceblue;
+  }

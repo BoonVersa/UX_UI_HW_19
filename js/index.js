@@ -49,3 +49,6 @@ $(document).ready(function() {
     $(this).removeClass('spin');
   });
 });
+$("button").click(function(){
+  $(this).text("CLICKED!");
+});
